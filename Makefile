@@ -13,7 +13,7 @@ NON_MATCHING := 0
 # If ORIG_COMPILER is 1, compile with QEMU_IRIX and the original compiler
 ORIG_COMPILER := 0
 # If COMPILER is "gcc", compile with GCC instead of IDO.
-COMPILER := arm-none-eabi-gcc
+COMPILER := gcc
 # Target game version. Currently only the following version is supported:
 #   gc-eu-mq-dbg   GameCube Europe/PAL Master Quest Debug (default)
 VERSION := gc-eu-mq-dbg
