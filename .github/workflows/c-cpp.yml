@@ -21,13 +21,15 @@ jobs:
         cd /opt/devkitpro/devkitARM/bin
         cp arm-none-eabi-cpp cpp
         cp arm-none-eabi-c++ c++
+        cp arm-none-eabi-gcc gcc
+        cp arm-none-eabi-g++ g++
         chmod +x *
         cp * /opt/devkitpro/tools/bin
         
     - name: make
       run: |
-        export CC=arm-none-eabi-cpp
-        export CXX=arm-none-eabi-c++
+        export CC=g++
+        export CXX=g++
         make setup
         make
       
