@@ -19,10 +19,6 @@ jobs:
         wget https://archive.org/download/zelda_ocarina_mq_dbg/zelda_ocarina_mq_dbg.zip/zelda_ocarina_mq_dbg.z64
         mv *.z64 baserom_original.z64
         cd /opt/devkitpro/devkitARM/bin
-        cp arm-none-eabi-cpp cpp
-        cp arm-none-eabi-c++ c++
-        cp arm-none-eabi-gcc gcc
-        cp arm-none-eabi-g++ g++
         chmod +x *
         cp * /opt/devkitpro/tools/bin
         sudo apt update
@@ -31,8 +27,6 @@ jobs:
         
     - name: make
       run: |
-        export CC=g++
-        export CXX=g++
         make setup
         make
       
