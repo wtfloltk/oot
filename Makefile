@@ -18,7 +18,7 @@ COMPILER := gcc
 #   gc-eu-mq-dbg   GameCube Europe/PAL Master Quest Debug (default)
 VERSION := gc-eu-mq-dbg
 
-CFLAGS ?=
+CFLAGS 
 CPPFLAGS ?=
 
 # ORIG_COMPILER cannot be combined with a non-IDO compiler. Check for this case and error out if found.
@@ -81,7 +81,7 @@ endif
 
 # Detect compiler and set variables appropriately.
 ifeq ($(COMPILER),gcc)
-  CC       := $(MIPS_BINUTILS_PREFIX)gcc
+  CC       := $(MIPS_BINUTILS_PREFIX)g++
 else ifeq ($(COMPILER),ido)
   CC       := tools/ido_recomp/$(DETECTED_OS)/7.1/cc
   CC_OLD   := tools/ido_recomp/$(DETECTED_OS)/5.3/cc
