@@ -113,7 +113,7 @@ INC := -Iinclude -Iinclude/libc -Isrc -I$(BUILD_DIR) -I.
 # Check code syntax with host compiler
 CHECK_WARNINGS := -Wall -Wextra -Wno-format-security -Wno-unknown-pragmas -Wno-unused-parameter -Wno-unused-variable -Wno-missing-braces
 
-CPP        := arn-none-eabi-cpp
+CPP        := arm-none-eabi-cpp
 MKLDSCRIPT := tools/mkldscript
 MKDMADATA  := tools/mkdmadata
 ELF2ROM    := tools/elf2rom
