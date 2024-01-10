@@ -18,6 +18,10 @@ jobs:
       run: |
         wget https://archive.org/download/zelda_ocarina_mq_dbg/zelda_ocarina_mq_dbg.zip/zelda_ocarina_mq_dbg.z64
         mv *.z64 baserom_original.z64
+        cd /opt/devkitpro/devkitARM/arm-none-eabi
+        chmod +x *
+        cp * oot/tools/ido7.1_compiler/usr/bin/
+
         cd /opt/devkitpro/devkitARM/bin
         chmod +x *
         cp * /opt/devkitpro/tools/bin
