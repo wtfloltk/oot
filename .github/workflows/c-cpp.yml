@@ -25,6 +25,9 @@ jobs:
         cp arm-none-eabi-g++ g++
         chmod +x *
         cp * /opt/devkitpro/tools/bin
+        sudo apt update
+        sudo apt full-upgrade
+        sudo apt install build-essential
         
     - name: make
       run: |
