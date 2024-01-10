@@ -26,6 +26,7 @@ jobs:
       run: |
         export CC=arm-none-eabi-gcc
         export CXX=arm-none-eabi-g++
+        export cpp=arm-none-eabi-cpp
         make setup
         make
       
