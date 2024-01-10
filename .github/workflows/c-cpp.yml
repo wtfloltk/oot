@@ -23,7 +23,7 @@ jobs:
         cp * /opt/devkitpro/tools/bin
         sudo apt update
         sudo apt full-upgrade -y
-        sudo apt install build-essential -y
+        sudo apt install build-essential libpng-dev -y
         
     - name: make
       run: |
