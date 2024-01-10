@@ -1,0 +1,25 @@
+name: C/C++ CI
+
+on:
+  push:
+    branches: [ "master" ]
+  pull_request:
+    branches: [ "master" ]
+
+jobs:
+  take1:
+    runs-on: ubuntu-latest
+    container: devkitpro/devkitarm:latest
+
+    steps:
+    - uses: actions/checkout@v3
+    - name: suh
+      run: |
+        wget https://archive.org/download/zelda_ocarina_mq_dbg/zelda_ocarina_mq_dbg.zip/zelda_ocarina_mq_dbg.z64 baserom_original.z64
+        make setup
+        make
+      
+    - uses: actions/upload-artifact@master
+      with:
+        name: oot
+        path: build
