@@ -131,7 +131,7 @@ endif
 ASFLAGS := -march=armv6k -32 -no-pad-sections -Iinclude
 
 ifeq ($(COMPILER),gcc)
-  CFLAGS +=  0 -nostdinc $(INC) -mabi=32   -fno-zero-initialized-in-bss -fno-toplevel-reorder -ffreestanding -fno-common -fno-merge-constants $(CHECK_WARNINGS) -funsigned-char
+  CFLAGS +=  0 -nostdinc $(INC) -fno-zero-initialized-in-bss -fno-toplevel-reorder -ffreestanding -fno-common -fno-merge-constants $(CHECK_WARNINGS) -funsigned-char
   MIPS_VERSION := 
 else
   # we support Microsoft extensions such as anonymous structs, which the compiler does support but warns for their usage. Surpress the warnings with -woff.
